@@ -3,7 +3,7 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
 
     const webhookUrl = "https://discord.com/api/webhooks/1268893038793719859/_ktjZVX-uHx8UVoYu7GAdrpkRLpbysF11nl120aBoWKRwdsY06g_9dAq1HYG7yeWvqwk";
     
-    // Collect the answers, including Discord and Trade name
+    // Collect all form data
     const answers = {
         discordName: document.getElementById("discordName").value,
         tradeName: document.getElementById("tradeName").value,
@@ -17,28 +17,28 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
         question8: document.getElementById("question8").value
     };
 
-    // Prepare the payload with all questions, Discord name, and Trade name
+    // Prepare the payload with all quiz data
     const payload = {
         content: `
 **Discord Name**: ${answers.discordName}
 **Trade Name**: ${answers.tradeName}
 
 **Quiz Answers:**
-1. **In my nation, only royalty is permitted. What realme am I in?** - ${answers.question1}
+1. **In my nation, only royalty is permitted. What realm am I in?** - ${answers.question1}
 2. **I will remain indestructible even when everything will be gone. What am I?** - ${answers.question2}
 3. **I have no weakness. Did I also mention rich?** - ${answers.question3}
-4. **What color is the sky on a clear day?** - ${answers.question4}
-5. **What is the largest mammal on Earth?** - ${answers.question5}
-6. **What element does 'O' represent on the periodic table?** - ${answers.question6}
-7. **How many continents are there on Earth?** - ${answers.question7}
-8. **What is the tallest mountain in the world?** - ${answers.question8}
+4. **Okay I warrant the giant title, but am not the biggest monster right?** - ${answers.question4}
+5. **Am a literal sniper. Why is my weakness a sword?** - ${answers.question5}
+6. **Am I richer than Opulina? Do I need to ask Adam?** - ${answers.question6}
+7. **Why did no one care about me being elven until the gods showed up?** - ${answers.question7}
+8. **In front of the elves, I might as well not be seen?** - ${answers.question8}
         `
     };
 
-    // Log to the console for debugging purposes
+    // Log for debugging
     console.log("Submitting payload: ", payload);
 
-    // Send the data to the Discord webhook
+    // Send data to Discord webhook
     fetch(webhookUrl, {
         method: "POST",
         headers: {
