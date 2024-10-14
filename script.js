@@ -9,19 +9,29 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
         tradeName: document.getElementById("tradeName").value,
         question1: document.getElementById("question1").value,
         question2: document.getElementById("question2").value,
-        question3: document.getElementById("question3").value
+        question3: document.getElementById("question3").value,
+        question4: document.getElementById("question4").value,
+        question5: document.getElementById("question5").value,
+        question6: document.getElementById("question6").value,
+        question7: document.getElementById("question7").value,
+        question8: document.getElementById("question8").value
     };
 
-    // Prepare the payload with Discord name and Trade name included in the quiz answers
+    // Prepare the payload with all questions, Discord name, and Trade name
     const payload = {
         content: `
 **Discord Name**: ${answers.discordName}
 **Trade Name**: ${answers.tradeName}
 
 **Quiz Answers:**
-1. **What is the capital of France?** - ${answers.question1}
-2. **What is 5 + 3?** - ${answers.question2}
-3. **Who wrote 'Hamlet'?** - ${answers.question3}
+1. **In my nation, only royalty is permitted. What realme am I in?** - ${answers.question1}
+2. **I will remain indestructible even when everything will be gone. What am I?** - ${answers.question2}
+3. **I have no weakness. Did I also mention rich?** - ${answers.question3}
+4. **What color is the sky on a clear day?** - ${answers.question4}
+5. **What is the largest mammal on Earth?** - ${answers.question5}
+6. **What element does 'O' represent on the periodic table?** - ${answers.question6}
+7. **How many continents are there on Earth?** - ${answers.question7}
+8. **What is the tallest mountain in the world?** - ${answers.question8}
         `
     };
 
