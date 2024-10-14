@@ -1,21 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-container h1 {
+            text-align: center;
+        }
+        .quiz-container label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <form id="quiz-form">
+    <div class="quiz-container">
         <h1>Quiz</h1>
-        <label>Question 1:</label>
-        <input type="text" id="answer1">
+        <form id="quizForm">
+            <label for="question1">1. What is the capital of France?</label>
+            <input type="text" id="question1" name="question1" required>
 
-        <label>Question 2:</label>
-        <input type="text" id="answer2">
+            <label for="question2">2. What is 5 + 3?</label>
+            <input type="text" id="question2" name="question2" required>
 
-        <label>Question 3:</label>
-        <input type="text" id="answer3">
+            <label for="question3">3. Who wrote 'Hamlet'?</label>
+            <input type="text" id="question3" name="question3" required>
 
-        <input type="submit" value="Submit">
-    </form>
+            <button type="submit">Submit Answers</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
